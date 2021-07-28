@@ -1,11 +1,28 @@
-Codify
+# Codify
 
 A simple code to obfuscate any of your input.
 
-How to use:
-  
-  - install requirements\n
-    "pip install -r reqs.txt"
-  
-  - "python codegen.py"
-  
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements.
+
+'''bash
+pip install -r reqs.txt
+'''
+
+## Usage
+
+'''bash
+python codegen.py
+'''
+
+## Contributing
+
+Pull requests are welcome. 
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
