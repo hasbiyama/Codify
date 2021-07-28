@@ -6,15 +6,15 @@ A simple code to obfuscate any of your input.
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements.
 
-'''bash
+```bash
 pip install -r reqs.txt
-'''
+```
 
 ## Usage
 
-'''bash
+```bash
 python codegen.py
-'''
+```
 
 ## Contributing
 
