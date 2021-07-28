@@ -15,7 +15,9 @@ pip install -r reqs.txt
 ```bash
 python codegen.py
 ```
-![alt text] (https://i.ibb.co/jkPCKHR/Screenshot-549.png)
+<p align="center">
+   <img src=https://i.ibb.co/jkPCKHR/Screenshot-549.png alt="[YOUR_ALT]"/>
+</p> 
 
 ## Contributing
 
