@@ -34,5 +34,4 @@ else: pass
 
 letters = open(aL, 'r')
 ltr = letters.read()
-result = "".join((random.choice(ltr)) for x in range(10))
 letters.close()

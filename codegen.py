@@ -32,12 +32,20 @@ def codeGen():
 
 	else: pass
 
-	inp2 = input("\n\t>> Would you like to generate your code? \n\t(y/n) : ")
+	inp2 = input("\n\t>> Would you like me to generate your code? \n\t(y/n) : ")
 
 	if inp2 == y.lower():
 
+		print("\t==========================================")	
+		inp3 = input("\n\t>> What is the str, num, or char do you want me to codify:\n\t>> ")
+		print("\t==========================================================")	
+		inp4 = input("\n\t>> How long is your desired code: ")
+		print("\t=======================================")	
+
+		result = "".join((random.choice(inp3).join((random.choice(ltr)) for x in range(int(inp4)))))
+
 		print("\t+++++++++++++++++++++++++++")	
-		print("\t>> Your code is:", colored(result, 'yellow', attrs=['bold']))
+		print("\t>> Here's your code:", colored(result, 'yellow', attrs=['bold']))
 		print("\t+++++++++++++++++++++++++++")
 		
 		if not path.exists(uD1):
