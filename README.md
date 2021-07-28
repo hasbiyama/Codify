@@ -15,7 +15,7 @@ pip install -r reqs.txt
 ```bash
 python codegen.py
 ```
-![alt text] (https://drive.google.com/file/d/1xkitMdF36WoxBxLCSVMmYQ7xcwEBUCmO/view?usp=sharing)
+![alt text] (https://i.ibb.co/jkPCKHR/Screenshot-549.png)
 
 ## Contributing
 
