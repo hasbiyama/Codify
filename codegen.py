@@ -1,4 +1,6 @@
-from mFile import *
+from srcode import *
+from backcode import attrClass
+from backcode import inpClass
 
 ptoF1 = '../data'
 os.chdir(ptoF1)
@@ -6,36 +8,17 @@ os.chdir(ptoF1)
 def codeGen():
 
 	init()
-	
+
 	inp = input("\n\t>> Hi, what's yourname: ")
+
 	print("\t***************************")
 	print("\t>> Hello, " +  colored(str(inp).upper(), 'magenta', attrs=['bold']) + "!")
 	print("\t***************************")
 
 	if not path.exists(uD0):
 		
-		print("\t++++++++++++++++++++++++++++")
-		print(colored("\t[!] File doesn't exist in the database! ", 'cyan', attrs=['bold']))
-		time.sleep(1)
-		print(colored("\t[!] Adding" + uD0 + "...", 'cyan', attrs=['bold']))
-		time.sleep(2)
-		print("\t++++++++++++++++++++++++++++")
-
-		open(uD0, 'w')
-
-		with open(uD0) as fp:
-
-			fp.read()
-			print({"User: "+ inp}, 
-				  {"Login at: " + time.ctime(sec)}, 
-				  file=open(uD0, 'a'))			
-			fp.close()
-
-		time.sleep(3)
-
-		print("\t++++++++++++++++++++++++++++++++++++++++")
-		print(colored("\t[+] File " + uD0 + " has been created! ", 'green', attrs=['bold']))
-		print("\t++++++++++++++++++++++++++++++++++++++++")
+		usrr = attrClass(uD0, inp, 1, 2, 3, "Login at: ")
+		usrr.pherr()
 
 	elif path.exists(uD0):
 
@@ -59,30 +42,8 @@ def codeGen():
 		
 		if not path.exists(uD1):
 
-			print("\t+++++++++++++++++++++++++")
-			print(colored("\t[!] File doesn't exist in the database! ", 'cyan', attrs=['bold']))
-			time.sleep(1)
-			print(colored("\t[!] Adding " + uD1 + "...", 'cyan', attrs=['bold']))
-			time.sleep(2)
-			print("\t+++++++++++++++++++++++++")
-
-			open(uD1, 'w')
-
-			with open(uD1) as fp:
-
-				fp.read()
-				print({"User: "+ inp}, 
-					  {"Code: " + result},
-					  {"Time: " + time.ctime(sec)}, 
-					  file=open(uD1, 'a'))			
-				fp.close()
-
-			time.sleep(3)
-
-			print("\t++++++++++++++++++++++++++++++++++++++++")
-			print(colored("\t[+] File " + uD1 + " has been created! ", 'green', attrs=['bold']))
-			print("\t++++++++++++++++++++++++++++++++++++++++")
-
+			usrr = attrClass(uD1, inp, 1, 2, 3, "Time: ", code='Code:', result=result)
+			usrr.pherr()
 
 		elif path.exists(uD1):
 
@@ -104,29 +65,8 @@ def codeGen():
 		
 		if not path.exists(uD2):
 
-			print("\t+++++++++++++++++++++++++")
-			print(colored("\t[!] File doesn't exist in the database! ", 'cyan', attrs=['bold']))
-			time.sleep(1)
-			print(colored("\t[!] Adding " + uD2 + "...", 'cyan', attrs=['bold']))
-			time.sleep(2)
-			print("\t+++++++++++++++++++++++++")
-
-			open(uD2, 'w')
-
-			with open(uD2) as fp:
-
-				fp.read()
-				print({"User: "+ inp}, 
-					  {"Aboting at: " + time.ctime(sec)}, 
-					  file=open(uD2, 'a'))			
-				fp.close()
-
-			time.sleep(2)
-
-			print("\t++++++++++++++++++++++++++++++++++++++++")
-			print(colored("\t[+] File " + uD2 + " has been created! ", 'green', attrs=['bold']))
-			print("\t++++++++++++++++++++++++++++++++++++++++")
-
+			usrr = attrClass(uD2, inp, 1, 2, 3, "Aborting at: ")
+			usrr.pherr()
 
 		elif path.exists(uD2):
 
@@ -149,28 +89,8 @@ def codeGen():
 
 		if not path.exists(uD3):
 
-			print("\t+++++++++++++++++++++++++")
-			print(colored("\t[!] File doesn't exist in the database! ", 'cyan', attrs=['bold']))
-			time.sleep(1)
-			print(colored("\t[!] Adding " + uD3 + "...", 'cyan', attrs=['bold']))
-			time.sleep(2)
-			print("\t+++++++++++++++++++++++++")
-
-			open(uD3, 'w')
-
-			with open(uD3) as fp:
-
-				fp.read()
-				print({"User: "+ inp}, 
-					  {"Attempting at: " + time.ctime(sec)}, 
-					  file=open(uD3, 'a'))			
-				fp.close()
-
-			time.sleep(3)
-
-			print("\t++++++++++++++++++++++++++++++++++++++++")
-			print(colored("\t[+] File " + uD3 + " has been created! ", 'green', attrs=['bold']))
-			print("\t++++++++++++++++++++++++++++++++++++++++")
+			usrr = attrClass(uD3, inp, 1, 2, 3, "Attempting at: ")
+			usrr.pherr()
 
 		elif path.exists(uD3):
 
