@@ -1,6 +1,0 @@
-{'User: Hasbi'} {'Login at: Wed Jul 28 19:50:37 2021'}
-{'User: 121'} {'Login at: Wed Jul 28 19:51:35 2021'}
-{'User: Hasbi'} {'Login at: Wed Jul 28 19:52:01 2021'}
-{'User: Hasbi\\'} {'Login at: Wed Jul 28 19:52:43 2021'}
-{'User: lira'} {'Login at: Wed Jul 28 19:53:01 2021'}
-{'User: kira'} {'Login at: Wed Jul 28 19:53:45 2021'}
