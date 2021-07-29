@@ -1,23 +1,21 @@
 from srcode import *
 
-class inpClass:
+class Input:
 
-	def __init__(self, inp): 
+	def __init__(self, inp, inp3, length): 
 
 		self.inp = inp
+		self.inp3 = inp3
+		self.length =length
 
-	def inpf(self):
-
-		self.inp = input("\n\t>> Hi, what's yourname: ")
-
-class attrClass(inpClass):
+class Attributes(Input):
 
 	def __init__(
-		self, ud, inp,
-		slp0, slp1, slp2,
-		stats, code='', result=''):
+		self, ud, inp, slp0, 
+		slp1, slp2,stats, inp3='',
+		length='', code='', result=''):
 
-		super().__init__(inp)
+		super().__init__(inp, inp3, length)
 
 		self.ud = ud 
 		self.slp0 = slp0
@@ -25,33 +23,52 @@ class attrClass(inpClass):
 		self.slp2 = slp2
 		self.stats = stats
 		self.code = code
+		self.length = length
 		self.result = result
-
 
 	def pherr(self):
 
-		print("\t++++++++++++++++++++++++++++")
-		print(colored("\t[!] File doesn't exist in the database! ", 'cyan', attrs=['bold']))
-		
-		time.sleep(self.slp0)
-		print(colored("\t[!] Adding " + self.ud + "...", 'cyan', attrs=['bold']))
-		
-		time.sleep(self.slp1)
-		print("\t++++++++++++++++++++++++++++")
+		if not path.exists(self.ud):
 
-		open(self.ud, 'w')
+			print("\t++++++++++++++++++++++++++++")
+			print(colored("\t[!] File doesn't exist in the database! ", 'cyan', attrs=['bold']))
+			
+			time.sleep(self.slp0)
+			print(colored("\t[!] Adding " + self.ud + "...", 'cyan', attrs=['bold']))
+			
+			time.sleep(self.slp1)
+			print("\t++++++++++++++++++++++++++++")
 
-		with open(self.ud) as fp:
+			open(self.ud, 'w')
 
-			fp.read()
-			print({"User: "+ self.inp},
-				  {self.code + self.result}, 
-				  {self.stats + time.ctime(sec)}, 
-				  file=open(self.ud, 'a'))			
-			fp.close()
+			with open(self.ud) as fp:
 
-		time.sleep(self.slp2)
+				fp.read()
+				print({"user: "+ self.inp},
+					  {self.inp3},
+					  {self.length},
+					  {self.code + self.result}, 
+					  {self.stats + time.ctime(sec)}, 
+					  file=open(self.ud, 'a'))			
+				fp.close()
 
-		print("\t++++++++++++++++++++++++++++++++++++++++")
-		print(colored("\t[+] File " + self.ud + " has been created! ", 'green', attrs=['bold']))
-		print("\t++++++++++++++++++++++++++++++++++++++++")
+			time.sleep(self.slp2)
+
+			print("\t++++++++++++++++++++++++++++++++++++++++")
+			print(colored("\t[+] File " + self.ud + " has been created! ", 'green', attrs=['bold']))
+			print("\t++++++++++++++++++++++++++++++++++++++++")
+	
+		elif path.exists(self.ud):
+
+			with open(self.ud) as fp:
+
+				fp.read()
+				print({"user: "+ self.inp},
+					  {self.inp3},
+					  {self.length},
+					  {self.code + self.result}, 
+					  {self.stats + time.ctime(sec)}, 
+					  file=open(self.ud, 'a'))			
+				fp.close()
+
+		else: pass	
