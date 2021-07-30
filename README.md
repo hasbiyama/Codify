@@ -1,6 +1,6 @@
 # Codify
 
-A simple code to obfuscate any of your input.
+A simple way to obfuscate any of your input while easily manage its data.
 
 ## Installation
 
