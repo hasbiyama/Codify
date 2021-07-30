@@ -43,14 +43,16 @@ class Attributes(Input):
 
 			with open(self.ud) as fp:
 
-				fp.read()
-				print({"user: "+ self.inp},
-					  {self.inp3},
-					  {self.length},
-					  {self.code + self.result}, 
-					  {self.stats + time.ctime(sec)}, 
-					  file=open(self.ud, 'a'))			
+				lines = fp.readlines()
+				
+				count = 0
+				for line in lines:
+					count += 1
+
+				print(f'[line {count}] <{"user: "+ self.inp}> <{"org: " + self.inp3}> <{"len: "+ self.length}> <{self.code + self.result}> <{self.stats + time.ctime(sec)}>', file=open(self.ud, 'a'))
+							
 				fp.close()
+
 
 			time.sleep(self.slp2)
 
@@ -62,13 +64,14 @@ class Attributes(Input):
 
 			with open(self.ud) as fp:
 
-				fp.read()
-				print({"user: "+ self.inp},
-					  {self.inp3},
-					  {self.length},
-					  {self.code + self.result}, 
-					  {self.stats + time.ctime(sec)}, 
-					  file=open(self.ud, 'a'))			
+				lines = fp.readlines()
+				
+				count = 0
+				for line in lines:
+					count += 1
+
+				print(f'[line {count}] <{"user: "+ self.inp}> <{"org: " + self.inp3}> <{"len: "+ self.length}> <{self.code + self.result}> <{self.stats + time.ctime(sec)}>', file=open(self.ud, 'a'))
+									
 				fp.close()
 
 		else: pass	

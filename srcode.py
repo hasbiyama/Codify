@@ -1,37 +1,32 @@
-import time
-import sys
+import re
 import os
-from os import path
-import pyautogui
-import random
+import sys
 import time
+import random
+from os import path
 from datetime import datetime
 from colorama import init
 from termcolor import colored
 
-y = "y"
-n = "n"
+y, n = 'y', 'n'
 a, b, c, d = 'a', 'b', 'c', 'd'
-num = 0
 
 uD0 = 'username.txt'
 uD1 = 'usercode.txt'
 uD2 = 'userabort.txt'
-uD3 = 'invalidinput.txt'
-invalid = 'invalidiput.txt'
-abort = 'userabort.txt'
-codes = 'usercode.txt'
-user = 'username.txt' 
+uD3 = 'invalid_input.txt'
 
 sec = int(time.time())
 now = datetime.now()
-cr_time = now.strftime("%H")
+cr_time = int(now.strftime("%H"))
 DN_TIME = ['Morning', 'Afternoon', 'Evening', 'Night']
 
 aL = "allList.txt"
 ptoF0 = './rsc'
 srcf = os.listdir('./rsc')
-srcf0 = os.listdir('./data')	
+srcf0 = os.listdir('./data')
+
+inp = input("\n\t[?] Hi, what's yourname? ->  ")
 
 os.chdir(ptoF0)
 if not path.exists(aL):

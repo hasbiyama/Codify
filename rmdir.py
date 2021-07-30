@@ -1,47 +1,46 @@
+import sys
+import codegen
 from srcode import *
+from condt import *
+from backcode import *
+from itrcls import *
 
-class Remdir():
 
-	def __init__(self, arg='', curr_time=cr_time):
+class Remdir(Conditional):
 
-		self.arg = arg
-		self.curr_time = curr_time
+	def __init__(self, inp, arg=''): 
+		
+		super().__init__(inp, arg)
 		
 	def remDir(self):
-		for x in srcf0:
-			if x.endswith('.txt'):
-				if self.curr_time in range(3, 11):
-					self.arg = (DN_TIME[0])
 
-				elif self.curr_time in range(11, 14):
-					self.arg = (DN_TIME[1])
-
-				elif self.curr_time in range(14, 19):
-					self.arg = (DN_TIME[2])
-
-				elif self.curr_time in range(19, 3):
-					self.arg = (DN_TIME[3])
-
-				else: pass
-
-			elif not x.endswith('.txt'): 
+		if path.exists("../data"):
 				
-				inpNew = input("\n\t>> No database files! What you gonna do:\n\t  (a) Create | (b) Exit ->  ")
+			if path.isfile('../data/username.txt'):
+
+				condt = Conditional(inp)
+				condt.greetings()
+
+			elif not path.isfile('../data/username.txt'):
+
+				inpNew = input("\n\t[?] No database found!\n\t    What you gonna do: (a) Create | (b) Exit ->  ")
+				print("")
 
 				if inpNew == a: 
-					pass
+					isfileExist = Attributes(uD0, inp, 1, 2, 3, "Login at: ")
+					isfileExist.pherr()
 
 				elif inpNew == b:
 
 					print("\t+++++++++++++++++++++++++") 
-					print(colored("\t[-] Aborting ... bye!", 'green', attrs=['blink']))
+					print(colored("\t[!] Aborting ... bye!", 'green', attrs=['blink']))
 					print("\t+++++++++++++++++++++++++")
 
-					isfileExist = Attributes(uD2, inp, 1, 2, 3, "Aborting at: ")
+					isfileExist = Attributes(uD2, self.inp, 1, 2, 3, "Aborting at: ")
 					isfileExist.pherr()	
-					# time.sleep(1) 				
-					os.abort()
+					time.sleep(1) 
+					sys.exit()				
 
 				else: pass
-
 			else: pass
+		else: pass
