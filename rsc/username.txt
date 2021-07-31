@@ -1,5 +1,0 @@
-[line 6] <user: Yama> <org: > <len: > <> <Login at: Sat Jul 31 13:32:39 2021>
-[line 8] <user: kjkk> <org: > <len: > <> <Login at: Sat Jul 31 13:41:30 2021>
-[line 11] <user: HAsbi> <org: > <len: > <> <Login at: Sat Jul 31 14:12:27 2021>
-[line 14] <user: Habsi> <org: > <len: > <> <Login at: Sat Jul 31 14:20:58 2021>
-[line 15] <user: hbsdas> <org: > <len: > <> <Login at: Sat Jul 31 14:22:06 2021>
