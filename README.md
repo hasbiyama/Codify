@@ -1,6 +1,6 @@
 # Codify
 
-A simple way to obfuscate any of your input while easily manage its data.
+A simple way to play around with (semi-random) code databases while easily managing their data.
 
 ## Installation
 
@@ -16,7 +16,7 @@ pip install -r reqs.txt
 python codegen.py
 ```
 <p align="left">
-   <img src=https://i.ibb.co/m96qmzm/Screenshot-552.png alt="[YOUR_ALT]"/>
+   <img src=https://i.ibb.co/W6Z9ZnL/Screenshot-557.png alt="[YOUR_ALT]"/>
    <img src=https://i.ibb.co/ctBtSRX/Screenshot-553.png alt="[YOUR_ALT]"/>
 </p> 
 
