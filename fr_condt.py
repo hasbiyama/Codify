@@ -9,6 +9,8 @@ class ForL:
 
 	def frLoop(self):
 
+		os.chdir("../data")
+
 		pattern = re.compile(self.opt1)
 
 		for i, line in enumerate(open(self.file)):
@@ -19,7 +21,7 @@ class ForL:
 				
 				print("   " + match.string)
 				
-				sys.exit()
+				# sys.exit()
 		
 		sys.exit()
 

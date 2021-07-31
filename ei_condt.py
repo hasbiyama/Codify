@@ -40,6 +40,9 @@ class Option:
 		elif self.opt == d:
 			fr_condt.ForL(inpSp1, file=uD2).frLoop()
 
+		elif self.opt == e:
+			fr_condt.ForL(inpSp1, file=uD4).frLoop()
+
 if __name__ == '__main__':
 	optFunc()
 

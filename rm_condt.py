@@ -38,5 +38,10 @@ class Rmoption:
 		elif self.opt == d:
 			rm_fr_condt.Rmforl(inpSp1, file=uD3).frLoop()
 
+		
+		elif self.opt == e:
+			rm_fr_condt.Rmforl(inpSp1, file=uD4).frLoop()
+
+
 if __name__ == '__main__':
 	optFunc()

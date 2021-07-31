@@ -14,7 +14,7 @@ class Remdirext:
 
 			if x.endswith('.txt'):
 
-				conditional = condt.Conditional(inp)
+				conditional = condt.Conditional()
 				conditional.greetings()
 
 			elif not x.endswith('.txt'):
