@@ -1,10 +1,9 @@
-import sys
-import codegen
-from srcode import *
+import rmdir_ext
+import backcode
 from condt import *
-from backcode import *
-from itrcls import *
-
+from srcode import *
+from codegen import codeGen
+from codegen import inputPart
 
 class Remdir(Conditional):
 
@@ -15,32 +14,46 @@ class Remdir(Conditional):
 	def remDir(self):
 
 		if path.exists("../data"):
-				
-			if path.isfile('../data/username.txt'):
 
-				condt = Conditional(inp)
-				condt.greetings()
+			rmdir_ext.Remdirext().ifExt()
 
-			elif not path.isfile('../data/username.txt'):
+		elif not path.exists("../data"):
 
-				inpNew = input("\n\t[?] No database found!\n\t    What you gonna do: (a) Create | (b) Exit ->  ")
-				print("")
+			print(colored("\n\t[!] Data folder doesn't exist.", 'red', attrs=['bold']))
 
-				if inpNew == a: 
-					isfileExist = Attributes(uD0, inp, 1, 2, 3, "Login at: ")
-					isfileExist.pherr()
+			time.sleep(2)
+			
+			print(colored("\n\t[*] Creating ./data ... ", 'green', attrs=['bold']))
+			
+			time.sleep(2)
+			
+			os.makedirs("../data")
 
-				elif inpNew == b:
+			print(colored("\n\t[+] ./data created!\n", 'yellow', attrs=['bold']))
 
-					print("\t+++++++++++++++++++++++++") 
-					print(colored("\t[!] Aborting ... bye!", 'green', attrs=['blink']))
-					print("\t+++++++++++++++++++++++++")
+			os.chdir("../data")
 
-					isfileExist = Attributes(uD2, self.inp, 1, 2, 3, "Aborting at: ")
-					isfileExist.pherr()	
-					time.sleep(1) 
-					sys.exit()				
+			# USERNAME.TXT
 
-				else: pass
-			else: pass
+			backcode.Attributes(uD0, inp, 1, 2, 3, "Login at: ").pherr() 
+
+			# USERCODE.TXT
+
+			isfileExist = backcode.Attributes(uD1, inp, 1, 2, 3, "Time: ", code='Code: ')
+			isfileExist.pherr()
+
+			# USERABORT.TXT
+
+			backcode.Attributes(uD2, inp, 1, 2, 3, "Aborting at: ").pherr() 
+
+			# INVALID INPUT.TXT
+
+			backcode.Attributes(uD3, inp, 1, 2, 3, "Attempting at: ").pherr()		
+
+			rmdir_ext.Remdirext().ifExt()
+			# sys.exit()
+
 		else: pass
+
+if __name__ == '__main__':
+	remDir()

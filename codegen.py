@@ -1,10 +1,8 @@
+import rmdir
+import itrcls
+import backcode
+import rmdir_ext
 from srcode import *
-from rmdir import *
-from backcode import Attributes
-from backcode import Input
-
-ptoF1 = '../data'
-os.chdir(ptoF1)
 
 def codeGen():
 
@@ -13,11 +11,15 @@ def codeGen():
 	if inp == "":
 		print(colored("\n\t[x] Please input your name!", 'red', attrs=['bold']))
 		sys.exit()
-	else: pass		
+	else: pass
+	
+	itrcls.Itter(cr_time).elseIf() # module
 
-	Itter(cr_time).elseIf() # class
+	rmdir.Remdir(inp).remDir() # module
 
-	Remdir(inp).remDir() # class
+	os.chdir("../data") # new current dir
+
+def inputPart():
 
 	inp2 = input("\n\t[?] Would you like me to generate your code? (y/n) : ")
 	print("")
@@ -27,23 +29,35 @@ def codeGen():
 		inp3 = input("\t[?] What do you want me to codify: ")
 		print("")
 
-		inp4 = input("\t[?] How long is your code length: ")	
+		inp4 = input("\t[?] How long is your code length: ")
 		print("")
 
 		result = "".join((random.choice(ltr + inp3)) for x in range(int(inp4)))
+
+		if inp4 == "":
+
+			print(colored("\t[x] This line cannot be empty!", 'red', attrs=['bold']))
+		
+			sys.exit()                                
+
+		else: pass
 
 		print("\t   ++++++++++++++++")	
 		print("\t>> Hey, yo!")
 		print("\t   Here's your code:", colored(result, 'yellow', attrs=['bold']))
 		print("\t   ++++++++++++++++\n")
 
-		print("\t[!] have a nice day ~")
+		print(colored("\t[!] have a nice day ~", 'green', attrs=['bold']))
 		
+		# USERCODE.TXT
+
+		isfileExist = backcode.Attributes(uD1, inp, 1, 2, 3, "Time: ", inp3=inp3, 
+										length=inp4, code='Code: ', result=result)
+		isfileExist.pherr()
+
 		time.sleep(1)
 
-		isfileExist = Attributes(uD1, inp, 1, 2, 3, "Time: ", inp3=inp3, 
-						 		length=inp4, code='Code: ', result=result)
-		isfileExist.pherr()
+		sys.exit()
 
 	elif inp2.lower() == n :
 		print("\t+++++++++++++++++++++++++") 
@@ -52,17 +66,12 @@ def codeGen():
 
 		time.sleep(1)
 
-		isfileExist = Attributes(uD2, inp, 1, 2, 3, "Aborting at: ")
-		isfileExist.pherr() 
-
 	else : 
 		print("\t++++++++++++++++++++++++++++++++++++++++")
 		print(colored("\t[x] Try again, that's not a valid answer", 'red', attrs=['bold']))
 		print("\t++++++++++++++++++++++++++++++++++++++++")
 
 		time.sleep(1)
-		isfileExist = Attributes(uD3, inp, 1, 2, 3, "Attempting at: ")
-		isfileExist.pherr()		
 
 if __name__ == '__main__':
 	codeGen()

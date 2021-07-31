@@ -1,9 +1,5 @@
-from fr_condt import *
-from rm_fr_condt import *
+import rm_fr_condt 
 from srcode import *
-
-ptoF1 = '../data'
-os.chdir(ptoF1)
 
 class Rmoption:
 
@@ -19,18 +15,28 @@ class Rmoption:
 		
 		print("")
 
+		if inpSp1 == "" :
+		
+			print(colored("\t[x] This line cannot be empty!", 'red', attrs=['bold']))
+		
+			sys.exit()
+
+		else: pass
 
 		if self.opt == a:
-			Rmforl(inpSp1, file=uD0).frLoop()
+			rm_fr_condt.Rmforl(inpSp1, file=uD0).frLoop()
 
 
 		elif self.opt == b:
-			Rmforl(inpSp1, file=uD1).frLoop()
+			rm_fr_condt.Rmforl(inpSp1, file=uD1).frLoop()
 
 
 		elif self.opt == c:
-			Rmforl(inpSp1, file=uD2).frLoop()
+			rm_fr_condt.Rmforl(inpSp1, file=uD2).frLoop()
 	
 		
 		elif self.opt == d:
-			Rmforl(inpSp1, file=uD3).frLoop()
+			rm_fr_condt.Rmforl(inpSp1, file=uD3).frLoop()
+
+if __name__ == '__main__':
+	optFunc()

@@ -9,6 +9,8 @@ class Rmforl:
 
 	def frLoop(self): 
 
+		os.chdir("../data")
+
 		with open(self.file,'r') as f:
 			
 			lines = f.readlines()
@@ -28,6 +30,9 @@ class Rmforl:
 				else:
 
 					file.write(line)
+
+if __name__ == '__main__':
+	frLoop()
 
 
 

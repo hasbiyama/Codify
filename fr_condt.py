@@ -12,9 +12,17 @@ class ForL:
 		pattern = re.compile(self.opt1)
 
 		for i, line in enumerate(open(self.file)):
+			
 			for match in re.finditer(pattern, line):
+				
 				print(colored("\t[*] Found!\n", 'green', attrs=['bold']))
+				
 				print("   " + match.string)
+				
 				sys.exit()
+		
+		sys.exit()
 
+if __name__ == '__main__':
+	frLoop()
 	

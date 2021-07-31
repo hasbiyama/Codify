@@ -1,14 +1,9 @@
-import sys
+import ei_condt
+import rm_condt
+import codegen
 from srcode import *
-from itrcls import *
-from ei_condt import *
-from rm_condt import *
-from backcode import *
 
-ptoF1 = '../data'
-os.chdir(ptoF1)
-
-class Conditional():
+class Conditional:
 
 	def __init__(self, inp, arg=''):
 
@@ -38,13 +33,12 @@ class Conditional():
 				time.sleep(1)
 				sys.exit()
 
-			Rmoption(inpA).optFunc()
+			rm_condt.Rmoption(inpA).optFunc()
 
 			print(colored("\t[!] Done!", 'green', attrs=['bold']))
 			sys.exit()
 			
-		elif inpGr.lower() == b: 
-			pass
+		elif inpGr.lower() == b: codegen.inputPart()
 
 		elif inpGr.lower() == c: 
 			
@@ -64,7 +58,7 @@ class Conditional():
 				time.sleep(1)
 				sys.exit()
 
-			Option(inpSp).optFunc()
+			ei_condt.Option(inpSp).optFunc()
 
 		else: 
 
@@ -73,6 +67,9 @@ class Conditional():
 			print("\t++++++++++++++++++++++++++++++++++++")
 			time.sleep(1)
 			sys.exit()
+
+if __name__ == '__main__':
+	greetings()
 
  
 

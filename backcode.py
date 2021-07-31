@@ -57,8 +57,8 @@ class Attributes(Input):
 			time.sleep(self.slp2)
 
 			print("\t++++++++++++++++++++++++++++++++++++++++")
-			print(colored("\t[+] File " + self.ud + " has been created! ", 'green', attrs=['bold']))
-			print("\t++++++++++++++++++++++++++++++++++++++++")
+			print(colored("\t[+] File " + self.ud + " has been created!", 'green', attrs=['bold']))
+			print("\t++++++++++++++++++++++++++++++++++++++++\n")
 	
 		elif path.exists(self.ud):
 
@@ -75,3 +75,5 @@ class Attributes(Input):
 				fp.close()
 
 		else: pass	
+if __name__ == '__main__':
+	pherr()

@@ -1,8 +1,5 @@
-from fr_condt import *
+import fr_condt
 from srcode import *
-
-ptoF1 = '../data'
-os.chdir(ptoF1)
 
 class Option:
 
@@ -18,18 +15,31 @@ class Option:
 		
 		print("")
 
+		if inpSp1 == "" :
+	
+			print(colored("\t[x] This line cannot be empty!", 'red', attrs=['bold']))
+	
+			sys.exit()
+
+		else: pass
+
+		# searching input
+
 		if self.opt == a:
-			ForL(inpSp1, file=uD0).frLoop()
+			fr_condt.ForL(inpSp1, file=uD0).frLoop()
 
 
 		elif self.opt == b:
-			ForL(inpSp1, file=uD1).frLoop()
+			fr_condt.ForL(inpSp1, file=uD1).frLoop()
 
 
 		elif self.opt == c:
-			ForL(inpSp1, file=uD3).frLoop()
+			fr_condt.ForL(inpSp1, file=uD3).frLoop()
 	
 		
 		elif self.opt == d:
-			ForL(inpSp1, file=uD2).frLoop()
+			fr_condt.ForL(inpSp1, file=uD2).frLoop()
+
+if __name__ == '__main__':
+	optFunc()
 

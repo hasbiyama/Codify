@@ -12,3 +12,6 @@ class Func:
 		print("\n\t   *******************")
 		print("\t>> Good " + self.arg  + ", " + colored(str(self.inp).upper(), 'magenta', attrs=['bold']) + "!")
 		print("\t   *******************")
+
+if __name__ == '__main__':
+	fileFunc()

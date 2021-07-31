@@ -24,7 +24,6 @@ DN_TIME = ['Morning', 'Afternoon', 'Evening', 'Night']
 aL = "allList.txt"
 ptoF0 = './rsc'
 srcf = os.listdir('./rsc')
-srcf0 = os.listdir('./data')
 
 inp = input("\n\t[?] Hi, what's yourname? ->  ")
 
