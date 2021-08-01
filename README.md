@@ -18,8 +18,9 @@ pip install -r reqs.txt
 python codegen.py
 ```
 <p align="left">
-   <img src=https://i.ibb.co/vzQ3ChB/Screenshot-1759.png alt="[YOUR_ALT]"/>
-   <img src=https://i.ibb.co/ctBtSRX/Screenshot-553.png alt="[YOUR_ALT]"/>
+   <img src=https://i.ibb.co/vDp3tBm/Screenshot-1759-Copy-Copy.png alt="[YOUR_ALT]"/>
+   <img src=https://i.ibb.co/bgGwcwV/Screenshot-1759-Copy.png alt="[YOUR_ALT]"/>
+   <img src=https://i.ibb.co/YQyHpPY/Screenshot-1759.png alt="[YOUR_ALT]"/>
 </p> 
 
 ## Contributing
