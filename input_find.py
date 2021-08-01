@@ -44,5 +44,5 @@ class Search:
 			searching_db.File(inpSp1, file=uD4).searchFromFile()
 
 if __name__ == '__main__':
-	optFunc()
+	db_Search()
 

@@ -14,4 +14,4 @@ class Name:
 		print("\t   *******************")
 
 if __name__ == '__main__':
-	fileFunc()
+	nameGreet()

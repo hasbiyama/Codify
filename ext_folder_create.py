@@ -49,4 +49,4 @@ class Find:
 			else: pass
 		
 if __name__ == '__main__':
-	ifExt()
+	noFile()

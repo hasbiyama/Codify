@@ -121,4 +121,4 @@ class Folder:
 
 
 if __name__ == '__main__':
-	remDir()
+	createFolder()

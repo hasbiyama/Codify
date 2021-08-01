@@ -34,5 +34,5 @@ class File:
 		sys.exit()
 
 if __name__ == '__main__':
-	frLoop()
+	searchFromFile()
 	 

@@ -32,7 +32,7 @@ class File:
 					file.write(line)
 
 if __name__ == '__main__':
-	frLoop()
+	removeFromFile()
 
 
 

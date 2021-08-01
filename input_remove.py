@@ -44,4 +44,4 @@ class Remove:
 
 
 if __name__ == '__main__':
-	optFunc()
+	db_Remove()

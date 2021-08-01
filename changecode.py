@@ -90,4 +90,4 @@ def reType():
 
 
 if __name__ == '__main__':
-	retype()
+	reType()
