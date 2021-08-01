@@ -21,11 +21,9 @@ python codegen.py
    <img src=https://i.ibb.co/B4mZw13/Screenshot-1760.png alt="[YOUR_ALT]"/>
 </p> 
 
-## Generated Result
+## Data
 
-```bash
-from: codegen.py -> usercode.txt
-```
+The following is an example of generated data from input user.
 
 <p align="left">
    <img src=https://i.ibb.co/ctBtSRX/Screenshot-553.png alt="[YOUR_ALT]"/>
