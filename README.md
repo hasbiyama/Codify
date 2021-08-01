@@ -2,7 +2,7 @@
 
 # Codify
 
-A simple way to obfuscate any of your input while easily manage its data.
+A simple way to play with (semi-random) code generator databases while easily managing their data.
 
 ## Installation
 
