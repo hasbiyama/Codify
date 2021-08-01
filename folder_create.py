@@ -28,29 +28,31 @@ class Folder:
 		
 				sys.exit()
 			
-			else: pass
+			else: 
 
-			with open(uD0, 'r') as f:
+				with open(uD0, 'r') as f:
 
-				fp = f.readlines()
-					
-				for ln in fp:
-					
-					if inp in ln:
+					x = "<user: " + inp
+
+					fp = f.readlines()
+						
+					for ln in fp: pass # [Line 0] won't be read
+						
+					if x in ln:
 
 						verify_code.Verify(inp).verifyCode()
 
 						ext_folder_create.Find().noFile()
 
-					else: pass
+					else: 
 
-				print(colored("\n\t[!] I'm sorry, you are not registered.", 'red', attrs=['bold']))
+						print(colored("\n\t[!] I'm sorry, you are not registered.", 'red', attrs=['bold']))
 
-				print(colored("\t    * Please ask a member or admin to add you.", 'green', attrs=['bold']))
+						print(colored("\t    * Please ask a member or admin to add you.", 'green', attrs=['bold']))
 
-				time.sleep(1)
+						time.sleep(1)
 
-				sys.exit()
+						sys.exit()
 
 		
 		elif not path.exists("../data"):

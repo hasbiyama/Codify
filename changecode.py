@@ -11,21 +11,29 @@ def reType():
 	inp0 = input("\n\t[*] Please re-type your name -> ")
 	print("")
 
-	with open(uD4, 'r') as f:
+	x = "<user: " + inp0
 
-		for lsl in f: pass
+	with open(uD1, 'r') as f:
 
-		lsn = lsl
+		fp = f.readlines()
 
-	if inp0 in lsn:
+		for lsl in fp: 
 
-		remove_db.File(inp0, file=uD1).removeFromFile()
+			if inp0 in lsn:
 
-	else: 
+				time.sleep(1)
 
-		print(colored("\t[!] Please type your name correctly", 'red', attrs=['bold']))
-		time.sleep(1)
-		sys.exit()
+				remove_db.File(inp0, file=uD1).removeFromFile()
+
+				time.sleep(1)
+
+			else: 
+
+				time.sleep(2)
+
+				print(colored("\t[!] Please type your name correctly", 'red', attrs=['bold']))
+				time.sleep(1)
+				sys.exit()
 
 
 # REGENERATING CODE
@@ -87,7 +95,17 @@ def reType():
 
 		sys.exit()
 
+	else:
 
+		print("\t++++++++++++++++++++++++++++++++++++++++")
+		print(colored("\t[x] Try again, that's not a valid answer", 'red', attrs=['bold']))
+		print("\t++++++++++++++++++++++++++++++++++++++++")
+
+		file_create_add.Attributes(uD3, inp0, 1, 2, 3, "Attempting at: ").createFile()		
+
+		time.sleep(1)
+
+		sys.exit()
 
 if __name__ == '__main__':
 	reType()

@@ -18,6 +18,8 @@ class Exists:
 		if inpGr.lower() == a:
 
 			print("\n\t[?] What do you want to remove? ")
+
+			print(colored("\n\t[!] Never remove " + colored("'admin'", 'yellow') + colored(" on username", 'red'),'red', attrs=['bold']))
 			
 			inpA = input("\n\t   (a) username  | (b) usercode \n\t   (c) userabort | (d) invalid_input \n\t   (e) login_rec |  -> ")
 
