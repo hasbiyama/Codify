@@ -1,2 +1,0 @@
-from srcode import *
-
