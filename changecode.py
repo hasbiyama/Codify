@@ -19,7 +19,7 @@ def reType():
 
 		for lsl in fp: 
 
-			if inp0 in lsn:
+			if inp0 in lsl:
 
 				time.sleep(1)
 
