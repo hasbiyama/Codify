@@ -24,7 +24,7 @@ python codegen.py
 ## Generated Result
 
 ```bash
-codegen.py -> usercode.txt
+from: codegen.py -> usercode.txt
 ```
 
 <p align="left">
