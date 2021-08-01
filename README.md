@@ -19,8 +19,18 @@ python codegen.py
 ```
 <p align="left">
    <img src=https://i.ibb.co/B4mZw13/Screenshot-1760.png alt="[YOUR_ALT]"/>
+</p> 
+
+## Generated Result
+
+```bash
+codegen.py -> usercode.txt
+```
+
+<p align="left">
    <img src=https://i.ibb.co/ctBtSRX/Screenshot-553.png alt="[YOUR_ALT]"/>
 </p> 
+
 
 ## Contributing
 
