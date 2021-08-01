@@ -1,12 +1,12 @@
-import backcode
-import condt
+import option_opr
 from srcode import *
+import file_create_add
 
-class Remdirext:
+class Find:
 
 	def __init__(self): pass
 
-	def ifExt(self):
+	def noFile(self):
 
 		srcf0 = os.listdir('../data')
 
@@ -14,8 +14,8 @@ class Remdirext:
 
 			if x.endswith('.txt'):
 
-				conditional = condt.Conditional()
-				conditional.greetings()
+				conditional = option_opr.Exists()
+				conditional.dataExists()
 
 			elif not x.endswith('.txt'):
 

@@ -1,12 +1,10 @@
-import rmdir
-import backcode
-import rmdir_ext
-import rm_fr_condt
+import folder_create
+import file_create_add
 from srcode import *
 
 def codeGen():
 
-	rmdir.Remdir.remDir() # module
+	folder_create.Folder.createFolder() # module
 
 	os.chdir("../data") # new current dir
 
@@ -33,7 +31,7 @@ def inputPart():
 
 	print(colored("\t[*] Adding " + inp0 + " to " + uD0 + "... ", 'cyan', attrs=['bold']))
 	
-	backcode.Attributes(uD0, inp0, 1, 2, 3, "Added at: ").pherr() 
+	file_create_add.Attributes(uD0, inp0, 1, 2, 3, "Added at: ").createFile() 
 
 	time.sleep(2)
 
@@ -70,20 +68,22 @@ def inputPart():
 
 		result = "".join((random.choice(ltr + inp3)) for x in range(int(inp4)))
 
+		time.sleep(2)
+
 		print("\t   ++++++++++++++++")	
 		print("\t>> Hey, yo!")
 		print("\t   Here's your code:", colored(result, 'yellow', attrs=['bold']))
 		print("\t   ++++++++++++++++\n")
-
+		
+		time.sleep(1)
+		
 		print(colored("\t[!] have a nice day ~", 'green', attrs=['bold']))
 		
 		# USERCODE.TXT
 
-		isfileExist = backcode.Attributes(uD1, inp0, 1, 2, 3, "Time: ", inp3=inp3, 
+		isfileExist = file_create_add.Attributes(uD1, inp0, 1, 2, 3, "Time: ", inp3=inp3, 
 										length=inp4, code='Code: ', result=result)
-		isfileExist.pherr()
-
-		time.sleep(1)
+		isfileExist.createFile()
 
 		sys.exit()
 
@@ -93,7 +93,7 @@ def inputPart():
 		print(colored("\t[-] Aborting ... bye!", 'green', attrs=['blink']))
 		print("\t+++++++++++++++++++++++++")
 
-		backcode.Attributes(uD2, inp0, 1, 2, 3, "Aborting at: ").pherr() 
+		file_create_add.Attributes(uD2, inp0, 1, 2, 3, "Aborting at: ").createFile() 
 
 		time.sleep(1)
 
@@ -104,7 +104,7 @@ def inputPart():
 		print(colored("\t[x] Try again, that's not a valid answer", 'red', attrs=['bold']))
 		print("\t++++++++++++++++++++++++++++++++++++++++")
 
-		backcode.Attributes(uD3, inp0, 1, 2, 3, "Attempting at: ").pherr()		
+		file_create_add.Attributes(uD3, inp0, 1, 2, 3, "Attempting at: ").createFile()		
 
 		time.sleep(1)
 

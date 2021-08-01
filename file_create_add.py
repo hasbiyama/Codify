@@ -26,7 +26,7 @@ class Attributes(Input):
 		self.length = length
 		self.result = result
 
-	def pherr(self):
+	def createFile(self):
 
 		if not path.exists(self.ud):
 

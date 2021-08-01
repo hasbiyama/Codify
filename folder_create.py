@@ -1,14 +1,14 @@
-import itrcls
-import rmdir_ext
-import backcode
 import admin_init
 from srcode import *
+import file_create_add
+import ext_folder_create
+import time_for_greetings
 
-class Remdir:
+class Folder:
 
 	def __init__(self): pass 
 		
-	def remDir():
+	def createFolder():
 
 
 		if path.exists("../data"):
@@ -17,9 +17,9 @@ class Remdir:
 
 			inp = input("\n\t[?] Hi! What's yourname? ->  ").lower()
 
-			itrcls.Itter(inp, cr_time).elseIf() # module
+			time_for_greetings.Time(inp, cr_time).printTime() # module
 
-			backcode.Attributes(uD4, inp, 1, 2, 3, "Login at: ").pherr() 
+			file_create_add.Attributes(uD4, inp, 1, 2, 3, "Login at: ").createFile() 
 
 			if inp == "":
 
@@ -35,7 +35,7 @@ class Remdir:
 					
 					if inp in ln:
 
-						rmdir_ext.Remdirext().ifExt()
+						ext_folder_create.Find().noFile()
 
 					else: pass
 
@@ -50,11 +50,9 @@ class Remdir:
 		
 		elif not path.exists("../data"):
 
-			admin_init.Initialiser().greets()
+			admin_init.Guide().greets()
 
 			inp = input("\n\t[?] What's yourname? ->  ").lower()
-
-			itrcls.Itter(inp, cr_time).elseIf() # module
 
 			if inp == "":
 
@@ -64,7 +62,9 @@ class Remdir:
 
 			else : pass
 
-			admin_init.Initialiser(inp=inp).adminAdd()
+			time_for_greetings.Time(inp, cr_time).printTime() # module
+
+			admin_init.Guide(inp=inp).adminAdd()
 
 			
 
@@ -93,28 +93,28 @@ class Remdir:
 			
 			# (uD4) LOGIN_REC.TXT
 
-			backcode.Attributes(uD4, inp, 1, 2, 3, "Login at: ").pherr() 
+			file_create_add.Attributes(uD4, inp, 1, 2, 3, "This file was created at : ").createFile() 
 
 			# (uD0) USERNAME.TXT
 
-			backcode.Attributes(uD0, inp, 1, 2, 3, "Added at: ").pherr()
+			file_create_add.Attributes(uD0, inp, 1, 2, 3, "This file was created at : ").createFile()
 			
 			# (uD1) USERCODE.TXT
 
-			isfileExist = backcode.Attributes(uD1, inp, 1, 2, 3, "Time: ", code='Code: ')
-			isfileExist.pherr()
+			isfileExist = file_create_add.Attributes(uD1, inp, 1, 2, 3, "This file was created at : ", code='admin')
+			isfileExist.createFile()
 
 			# (uD2) USERABORT.TXT
 
-			backcode.Attributes(uD2, inp, 1, 2, 3, "Aborting at: ").pherr() 
+			file_create_add.Attributes(uD2, inp, 1, 2, 3, "This file was created at : ").createFile() 
 
 			# (uD3) INVALID INPUT.TXT
 
-			backcode.Attributes(uD3, inp, 1, 2, 3, "Attempting at: ").pherr()		
+			file_create_add.Attributes(uD3, inp, 1, 2, 3, "This file was created at : ").createFile()		
 
 			# --------------------
 
-			rmdir_ext.Remdirext().ifExt()
+			ext_folder_create.Find().noFile()
 			
 
 		else: pass

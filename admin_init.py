@@ -1,6 +1,6 @@
 from srcode import *
 
-class Initialiser:
+class Guide:
 
 	def __init__(self, inp='') : 
 
@@ -12,7 +12,7 @@ class Initialiser:
 		
 		time.sleep(2)
 		
-		print("\t[*] Please input " + colored('admin', 'yellow', attrs=['bold']) + " for the name, and I will generate everything for you!")
+		print("\t[*] Please type " + colored('admin', 'yellow', attrs=['bold']) + " for the name, and I will generate everything for you!")
 		
 		time.sleep(2)
 
@@ -26,9 +26,9 @@ class Initialiser:
 
 		else:
 
-			print("\n\t[!] I'm sorry, you are not registered.")
+			print(colored("\n\t[!] I'm sorry, you are not registered.", 'yellow', attrs=['bold']))
 			
-			print("\t     Please ask a member or admin to add you.")
+			print(colored("\t    Please ask a member or admin to add you.", 'cyan', attrs=['bold']))
 			
 			time.sleep(1)
 			

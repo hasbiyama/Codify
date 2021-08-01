@@ -1,13 +1,13 @@
-import rm_fr_condt 
+import remove_db 
 from srcode import *
 
-class Rmoption:
+class Remove:
 
 	def __init__(self, opt):
 
 		self.opt = opt
 
-	def optFunc(self):
+	def db_Remove(self):
 
 		print("\n\t[?] Type a user and/or time (e.g. 'Albert' or 'Thu Jul 29'):\n")
 		
@@ -24,23 +24,23 @@ class Rmoption:
 		else: pass
 
 		if self.opt == a:
-			rm_fr_condt.Rmforl(inpSp1, file=uD0).frLoop()
+			remove_db.File(inpSp1, file=uD0).removeFromFile()
 
 
 		elif self.opt == b:
-			rm_fr_condt.Rmforl(inpSp1, file=uD1).frLoop()
+			remove_db.File(inpSp1, file=uD1).removeFromFile()
 
 
 		elif self.opt == c:
-			rm_fr_condt.Rmforl(inpSp1, file=uD2).frLoop()
+			remove_db.File(inpSp1, file=uD2).removeFromFile()
 	
 		
 		elif self.opt == d:
-			rm_fr_condt.Rmforl(inpSp1, file=uD3).frLoop()
+			remove_db.File(inpSp1, file=uD3).removeFromFile()
 
 		
 		elif self.opt == e:
-			rm_fr_condt.Rmforl(inpSp1, file=uD4).frLoop()
+			remove_db.File(inpSp1, file=uD4).removeFromFile()
 
 
 if __name__ == '__main__':

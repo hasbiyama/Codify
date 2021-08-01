@@ -1,29 +1,29 @@
-import filecls
+import greetings
 from srcode import *
 
-class Itter:
+class Time:
 
 	def __init__(self, inp, cr_time): 
 
 		self.cr_time = cr_time
 		self.inp = inp
 
-	def elseIf(self):
+	def printTime(self):
 
 		if self.cr_time in range(3, 11): 
-			filecls.Func(self.inp, DN_TIME[0]).fileFunc()
+			greetings.Name(self.inp, DN_TIME[0]).nameGreet()
 
 		elif self.cr_time in range(11, 14): 
-			filecls.Func(self.inp, DN_TIME[1]).fileFunc()
+			greetings.Name(self.inp, DN_TIME[1]).nameGreet()
 
 		elif self.cr_time in range(14, 19): 
-			filecls.Func(self.inp, DN_TIME[2]).fileFunc()
+			greetings.Name(self.inp, DN_TIME[2]).nameGreet()
 
 		elif self.cr_time in range(19, 24): 
-			filecls.Func(self.inp, DN_TIME[3]).fileFunc()
+			greetings.Name(self.inp, DN_TIME[3]).nameGreet()
 
 		elif self.cr_time in range(0, 3):
-			filecls.Func(self.inp, DN_TIME[3]).fileFunc()
+			greetings.Name(self.inp, DN_TIME[3]).nameGreet()
 		else:
 			pass
 

@@ -1,13 +1,13 @@
-import fr_condt
+import searching_db
 from srcode import *
 
-class Option:
+class Search:
 
 	def __init__(self, opt):
 
 		self.opt = opt
 
-	def optFunc(self):
+	def db_Search(self):
 
 		print("\n\t[?] Type a user or time (e.g. 'Albert' or 'Thu Jul 29'):\n")
 		
@@ -26,22 +26,22 @@ class Option:
 		# searching input
 
 		if self.opt == a:
-			fr_condt.ForL(inpSp1, file=uD0).frLoop()
+			searching_db.File(inpSp1, file=uD0).searchFromFile()
 
 
 		elif self.opt == b:
-			fr_condt.ForL(inpSp1, file=uD1).frLoop()
+			searching_db.File(inpSp1, file=uD1).searchFromFile()
 
 
 		elif self.opt == c:
-			fr_condt.ForL(inpSp1, file=uD3).frLoop()
+			searching_db.File(inpSp1, file=uD3).searchFromFile()
 	
 		
 		elif self.opt == d:
-			fr_condt.ForL(inpSp1, file=uD2).frLoop()
+			searching_db.File(inpSp1, file=uD2).searchFromFile()
 
 		elif self.opt == e:
-			fr_condt.ForL(inpSp1, file=uD4).frLoop()
+			searching_db.File(inpSp1, file=uD4).searchFromFile()
 
 if __name__ == '__main__':
 	optFunc()

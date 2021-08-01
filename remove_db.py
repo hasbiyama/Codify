@@ -1,13 +1,13 @@
 from srcode import *
 
-class Rmforl:
+class File:
 
 	def __init__(self, opt1, file=''):
 		
 		self.opt1 = opt1
 		self.file = file
 
-	def frLoop(self): 
+	def removeFromFile(self): 
 
 		os.chdir("../data")
 

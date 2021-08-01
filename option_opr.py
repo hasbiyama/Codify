@@ -1,16 +1,16 @@
-import ei_condt
-import rm_condt
+import input_find
+import input_remove
 import codegen
 import changecode
 from srcode import *
 
-class Conditional:
+class Exists:
 
 	def __init__(self, arg=''):
 
 		self.arg = arg
 
-	def greetings(self):
+	def dataExists(self):
 		
 		print("\n\t[?] Database exists! What you gonna do?")
 		inpGr = input("\n\t   (a) Remove | (b) Add \n\t   (c) Find   | (d) Change code | ->  ")
@@ -35,7 +35,7 @@ class Conditional:
 				time.sleep(1)
 				sys.exit()
 
-			rm_condt.Rmoption(inpA).optFunc()
+			input_remove.Remove(inpA).db_Remove()
 
 			print(colored("\t[!] Done!", 'green', attrs=['bold']))
 			sys.exit()
@@ -63,11 +63,11 @@ class Conditional:
 				time.sleep(1)
 				sys.exit()
 
-			ei_condt.Option(inpSp).optFunc()
+			input_find.Search(inpSp).db_Search()
 
 		elif inpGr.lower() == d: 
 
-			changecode.retype()
+			changecode.reType()
 
 		else: 
 

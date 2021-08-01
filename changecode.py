@@ -1,16 +1,17 @@
-import backcode
-import rm_fr_condt
+import file_create_add
+import remove_db
 from srcode import *
 
-def retype():
+def reType():
 
 
 # RETYPING CODE
 
 
-	inp0 = input("\n\t[*] Please re-type your name -> \n")
+	inp0 = input("\n\t[*] Please re-type your name -> ")
+	print("")
 
-	with open('username.txt', 'r') as f:
+	with open('login_rec.txt', 'r') as f:
 
 		for lsl in f: pass
 
@@ -18,11 +19,12 @@ def retype():
 
 	if inp0 in lsn:
 
-		rm_fr_condt.Rmforl(inp0, file=uD1).frLoop()
+		remove_db.File(inp0, file=uD1).removeFromFile()
 
 	else: 
 
-		print(colored("\n\t[!] Please type your name correctly", 'red', attrs=['bold']))
+		print(colored("\t[!] Please type your name correctly", 'red', attrs=['bold']))
+		time.sleep(1)
 		sys.exit()
 
 
@@ -59,16 +61,27 @@ def retype():
 
 		result = "".join((random.choice(ltr + inp3)) for x in range(int(inp4)))
 
+		print(colored("\t[*] Generating ...", 'cyan', attrs=['bold']))
+		print("")
+
+		time.sleep(2)
+
 		print("\t   ++++++++++++++++")	
 		print("\t>> Hey, yo!")
 		print("\t   Here's your code:", colored(result, 'yellow', attrs=['bold']))
 		print("\t   ++++++++++++++++\n")
-
+		
+		time.sleep(1)
+		
 		print(colored("\t[!] have a nice day ~", 'green', attrs=['bold']))
 
-		isfileExist = backcode.Attributes(uD1, inp0, 1, 2, 3, "Time: ", inp3=inp3, 
+
+		# USERCODE.TXT
+
+
+		isfileExist = file_create_add.Attributes(uD1, inp0, 1, 2, 3, "Time: ", inp3=inp3, 
 										length=inp4, code='Code: ', result=result)
-		isfileExist.pherr()
+		isfileExist.createFile()
 
 		time.sleep(1)
 

@@ -1,13 +1,13 @@
 from srcode import *
 
-class Func:
+class Name:
 
 	def __init__(self, inp, arg): 
 
 		self.inp = inp
 		self.arg = arg
 
-	def fileFunc(self):
+	def nameGreet(self):
 
 		print("\n\t   *******************")
 		print("\t>> Good " + self.arg  + ", " + colored(str(self.inp).upper(), 'magenta', attrs=['bold']) + "!")
