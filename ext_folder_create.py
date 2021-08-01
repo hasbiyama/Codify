@@ -14,8 +14,8 @@ class Find:
 
 			if x.endswith('.txt'):
 
-				conditional = option_opr.Exists()
-				conditional.dataExists()
+				options = option_opr.Exists()
+				options.dataExists()
 
 			elif not x.endswith('.txt'):
 
@@ -30,7 +30,7 @@ class Find:
 					print(colored("\t[!] Aborting ... bye!", 'green', attrs=['blink']))
 					print("\t+++++++++++++++++++++++++")
 
-					backcode.Attributes(uD2, inp, 1, 2, 3, "Aborting at: ").pherr()	
+					file_create_add.Attributes(uD2, inp, 1, 2, 3, "Aborting at: ").createFile()	
 					time.sleep(1) 
 					sys.exit()				
 

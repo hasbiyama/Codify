@@ -1,4 +1,5 @@
 import admin_init
+import verify_code
 from srcode import *
 import file_create_add
 import ext_folder_create
@@ -29,11 +30,15 @@ class Folder:
 			
 			else: pass
 
-			with open('username.txt', 'r') as f:
+			with open(uD0, 'r') as f:
+
+				fp = f.readlines()
 					
-				for ln in f:
+				for ln in fp:
 					
 					if inp in ln:
+
+						verify_code.Verify(inp).verifyCode()
 
 						ext_folder_create.Find().noFile()
 
@@ -101,7 +106,7 @@ class Folder:
 			
 			# (uD1) USERCODE.TXT
 
-			isfileExist = file_create_add.Attributes(uD1, inp, 1, 2, 3, "This file was created at : ", code='admin')
+			isfileExist = file_create_add.Attributes(uD1, inp, 1, 2, 3, "This file was created at : ", code='Code: admin')
 			isfileExist.createFile()
 
 			# (uD2) USERABORT.TXT

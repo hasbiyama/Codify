@@ -68,6 +68,9 @@ def inputPart():
 
 		result = "".join((random.choice(ltr + inp3)) for x in range(int(inp4)))
 
+		print(colored("\t[*] Generating ...", 'cyan', attrs=['bold']))
+		print("")
+
 		time.sleep(2)
 
 		print("\t   ++++++++++++++++")	

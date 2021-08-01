@@ -11,7 +11,7 @@ def reType():
 	inp0 = input("\n\t[*] Please re-type your name -> ")
 	print("")
 
-	with open('login_rec.txt', 'r') as f:
+	with open(uD4, 'r') as f:
 
 		for lsl in f: pass
 
