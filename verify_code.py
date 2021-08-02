@@ -23,13 +23,11 @@ class Verify:
 
 			with open(uD1, 'r') as f:
 
-				fp = str(f.readlines())
+				fp = f.read()
 
-				newF = fp.strip()
-
-				for line in newF:
-					
-					if re.search(r"\bCode: {}\b".format(str(inner_inp)), newF):
+				# for line in fp:
+				
+					if inner_inp in fp:
 
 						print(colored("\n\t[*] Logging in ...", 'green', attrs=['bold']))
 

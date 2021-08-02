@@ -58,7 +58,7 @@ def inputPart():
 	print(colored("\t[+] User " + inp0 + " has been added!", 'green', attrs=['bold']))
 	print("\t++++++++++++++++++++++++++++++++++++++++\n")
 
-	generate_code.Generator.reGen(inp=inp0)
+	generate_code.Generator(inp=inp0).reGen()
 
 if __name__ == '__main__':
 	codeGen()
