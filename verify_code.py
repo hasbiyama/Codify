@@ -11,13 +11,11 @@ class Verify:
 
 		inner_inp = input("\n\t[!] Please type your code : ")
 
-		x = "<user: " + self.outter_inp and "<Code: " + inner_inp
-
 		if inner_inp == "":
 
 			time.sleep(1)
 			
-			print(colored("\t[x] This line cannot be empty!", 'red', attrs=['bold']))
+			print(colored("\n\t[x] This line cannot be empty!", 'red', attrs=['bold']))
 		
 			sys.exit()
 
@@ -25,27 +23,29 @@ class Verify:
 
 			with open(uD1, 'r') as f:
 
-				fp = f.readlines()
+				fp = str(f.readlines())
 
-				for lsl in fp: pass
+				newF = fp.strip()
 
-				if x in lsl:
+				for line in newF:
 					
-					print(colored("\n\t[*] Logging in ...", 'green', attrs=['bold']))
+					if re.search(r"\bCode: {}\b".format(str(inner_inp)), newF):
 
-					time.sleep(1) 
+						print(colored("\n\t[*] Logging in ...", 'green', attrs=['bold']))
 
-					option_opr.Exists().dataExists()
+						time.sleep(1) 
 
-				else:
+						option_opr.Exists().dataExists()
 
-					time.sleep(2)
+					else:
 
-					print(colored("\n\t[x] Cannot find -> " + colored("user: " + self.outter_inp, 'yellow') + " | " + colored("code: " + inner_inp, 'yellow'), 'red', attrs=['bold']))
+						time.sleep(2)
 
-					time.sleep(1)	
-					
-					sys.exit()
+						print(colored("\n\t[x] Cannot find -> " + colored("user: " + self.outter_inp, 'yellow') + " | " + colored("code: " + inner_inp, 'yellow'), 'red', attrs=['bold']))
+
+						time.sleep(1)	
+						
+						sys.exit()
 
 if __name__ == '__main__':
 	verifyCode()

@@ -17,10 +17,10 @@ class Exists:
 
 		if inpGr.lower() == a:
 
+			print(colored("\n\t** recmd: not removing ", 'red') + colored("'admin'", 'yellow') + colored(" on username", 'red') + colored(' **', 'red') )
+
 			print("\n\t[?] What do you want to remove? ")
 
-			print(colored("\n\t[!] Never remove " + colored("'admin'", 'yellow') + colored(" on username", 'red'),'red', attrs=['bold']))
-			
 			inpA = input("\n\t   (a) username  | (b) usercode \n\t   (c) userabort | (d) invalid_input \n\t   (e) login_rec |  -> ")
 
 			if inpA.lower() == a: pass 
@@ -33,6 +33,8 @@ class Exists:
 				print("\n\t++++++++++++++++++++++++++++++++++++")
 				print(colored("\t[x] Try again, there's no {" + inpA + "} option", 'red', attrs=['bold']))
 				print("\t++++++++++++++++++++++++++++++++++++")
+
+				file_create_add.Attributes(uD3, self.inp, 1, 2, 3, "Attempting at: ").createFile()		
 				
 				time.sleep(1)
 				sys.exit()
@@ -61,6 +63,8 @@ class Exists:
 				print("\n\t++++++++++++++++++++++++++++++++++++")
 				print(colored("\t[x] Try again, there's no {" + inpSp + "} option", 'red', attrs=['bold']))
 				print("\t++++++++++++++++++++++++++++++++++++")
+				
+				file_create_add.Attributes(uD3, self.inp, 1, 2, 3, "Attempting at: ").createFile()		
 				
 				time.sleep(1)
 				sys.exit()

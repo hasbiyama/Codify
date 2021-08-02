@@ -1,8 +1,8 @@
 import admin_init
 import verify_code
+import option_opr
 from srcode import *
 import file_create_add
-import ext_folder_create
 import time_for_greetings
 
 class Folder:
@@ -18,8 +18,6 @@ class Folder:
 
 			inp = input("\n\t[?] Hi! What's yourname? ->  ").lower()
 
-			time_for_greetings.Time(inp, cr_time).printTime() # module
-
 			file_create_add.Attributes(uD4, inp, 1, 2, 3, "Login at: ").createFile() 
 
 			if inp == "":
@@ -28,21 +26,29 @@ class Folder:
 		
 				sys.exit()
 			
-			else: 
+			elif re.findall(r'\d', inp):
 
-				with open(uD0, 'r') as f:
+				print(colored("\n\t[x] Name can only accept string!", 'red', attrs=['bold']))
 
-					x = "<user: " + inp
+				sys.exit()
 
-					fp = f.readlines()
-						
-					for ln in fp: pass # [Line 0] won't be read
-						
-					if x in ln:
+			else: pass
+
+
+			time_for_greetings.Time(inp, cr_time).printTime() # module
+
+		
+			with open(uD0) as f:
+
+				fp = str(f.readlines())
+
+				newF = fp.strip()
+
+				for line in newF:
+					
+					if re.search(r"\buser: {}\b".format(inp), newF):
 
 						verify_code.Verify(inp).verifyCode()
-
-						ext_folder_create.Find().noFile()
 
 					else: 
 
@@ -121,7 +127,7 @@ class Folder:
 
 			# --------------------
 
-			ext_folder_create.Find().noFile()
+			option_opr.Exists().dataExists()
 			
 
 		else: pass

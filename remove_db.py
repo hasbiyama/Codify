@@ -11,6 +11,8 @@ class File:
 
 		os.chdir("../data")
 
+		total = 0
+
 		with open(self.file,'r') as f:
 			
 			lines = f.readlines()
@@ -29,7 +31,16 @@ class File:
 				
 				else:
 
+					total += 1
+
+					print(colored("\t   \n", 'yellow') + line)
+
+					time.sleep(1)
+
 					file.write(line)
+
+			print(colored("\t[+] Total: " + str(total), 'yellow', attrs=['bold']))
+
 
 if __name__ == '__main__':
 	removeFromFile()
