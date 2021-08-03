@@ -23,27 +23,27 @@ class Verify:
 
 			with open(uD1, 'r') as f:
 
-				fp = f.read()
+				fp = str(f.readlines())
 
 				# for line in fp:
-				
-					if inner_inp in fp:
+			
+				if re.search(r'\bCode: {}\b'.format(inner_inp), fp):
 
-						print(colored("\n\t[*] Logging in ...", 'green', attrs=['bold']))
+					print(colored("\n\t[*] Logging in ...", 'green', attrs=['bold']))
 
-						time.sleep(1) 
+					time.sleep(1) 
 
-						option_opr.Exists().dataExists()
+					option_opr.Exists().dataExists()
 
-					else:
+				else:
 
-						time.sleep(2)
+					time.sleep(2)
 
-						print(colored("\n\t[x] Cannot find -> " + colored("user: " + self.outter_inp, 'yellow') + " | " + colored("code: " + inner_inp, 'yellow'), 'red', attrs=['bold']))
+					print(colored("\n\t[x] Cannot find -> " + colored("user: " + self.outter_inp, 'yellow') + " | " + colored("code: " + inner_inp, 'yellow'), 'red', attrs=['bold']))
 
-						time.sleep(1)	
-						
-						sys.exit()
+					time.sleep(1)	
+					
+					sys.exit()
 
 if __name__ == '__main__':
 	verifyCode()
