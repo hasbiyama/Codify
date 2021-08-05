@@ -11,6 +11,7 @@ class Name:
 
 		print("\n\t   *******************")
 		print("\t>> Good " + self.arg  + ", " + colored(str(self.inp).upper(), 'magenta', attrs=['bold']) + "!")
+		print(colored("\t   Time: {}".format(now.strftime("%y-%m-%d %H:%M")), 'yellow'))
 		print("\t   *******************")
 
 if __name__ == '__main__':

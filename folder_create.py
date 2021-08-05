@@ -18,7 +18,7 @@ class Folder:
 
 			inp = input("\n\t[?] Hi! What's yourname? ->  ").lower()
 
-			file_create_add.Attributes(uD4, inp, 1, 2, 3, "Login at: ").createFile() 
+			file_create_add.Attributes(uD4, "Login at: ", 1, 2, 3, inp).createFile() 
 
 			if inp == "":
 
@@ -106,24 +106,24 @@ class Folder:
 			
 			# (uD4) LOGIN_REC.TXT
 
-			file_create_add.Attributes(uD4, inp, 1, 2, 3, "This file was created at : ").createFile() 
+			file_create_add.Attributes(uD4, "This file was created at : ", 1, 2, 3, inp).createFile() 
 
 			# (uD0) USERNAME.TXT
 
-			file_create_add.Attributes(uD0, inp, 1, 2, 3, "This file was created at : ").createFile()
+			file_create_add.Attributes(uD0, "This file was created at : ", 1, 2, 3, inp).createFile()
 			
 			# (uD1) USERCODE.TXT
 
-			isfileExist = file_create_add.Attributes(uD1, inp, 1, 2, 3, "This file was created at : ", code='Code: admin')
+			isfileExist = file_create_add.Attributes(uD1, "This file was created at : ", 1, 2, 3, inp + ' Code: admin' + ' id: {}'.format('1'))
 			isfileExist.createFile()
 
 			# (uD2) USERABORT.TXT
 
-			file_create_add.Attributes(uD2, inp, 1, 2, 3, "This file was created at : ").createFile() 
+			file_create_add.Attributes(uD2, "This file was created at : ", 1, 2, 3, inp).createFile() 
 
 			# (uD3) INVALID INPUT.TXT
 
-			file_create_add.Attributes(uD3, inp, 1, 2, 3, "This file was created at : ").createFile()		
+			file_create_add.Attributes(uD3, "This file was created at : ", 1, 2, 3, inp).createFile()		
 
 			# --------------------
 

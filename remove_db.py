@@ -33,13 +33,11 @@ class File:
 
 					total += 1
 
-					print(colored("\t   \n", 'yellow') + line)
-
 					time.sleep(1)
 
 					file.write(line)
 
-			print(colored("\t[+] Total: " + str(total), 'yellow', attrs=['bold']))
+			print(colored("\t[+] Remain: " + str(total), 'yellow', attrs=['bold']))
 
 
 if __name__ == '__main__':

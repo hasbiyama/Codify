@@ -12,7 +12,7 @@ class Guide:
 		
 		time.sleep(2)
 		
-		print("\t[*] Please type " + colored('admin', 'yellow', attrs=['bold']) + " for the name, and I will generate everything for you!")
+		print("\t[*] Please type " + colored('admin', 'yellow', attrs=['bold']) + " [@id: 1] for the name, and I will generate everything for you!")
 		
 		time.sleep(2)
 

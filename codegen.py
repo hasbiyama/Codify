@@ -50,7 +50,7 @@ def inputPart():
 	
 	print(colored("\t[*] Adding " + inp0 + " to " + uD0 + "... ", 'cyan', attrs=['bold']))
 	
-	file_create_add.Attributes(uD0, inp0, 1, 2, 3, "Added at: ").createFile() 
+	file_create_add.Attributes(uD0, "Added at: ", 1, 2, 3, inp0).createFile() 
 
 	time.sleep(2)
 

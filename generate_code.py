@@ -98,7 +98,7 @@ class Generator:
 
 			# GENERATING CODE
 
-
+			idx = "".join((random.choice(ltr + inp3)) for x in range(3))
 			result = "".join((random.choice(ltr + inp3)) for x in range(int(inp4)))
 
 			print(colored("\t[*] Generating ...", 'cyan', attrs=['bold']))
@@ -108,6 +108,7 @@ class Generator:
 
 			print("\t   ++++++++++++++++")	
 			print("\t>> Hey, yo!")
+			print("\t   Here's your id: ", colored(idx, 'magenta', attrs=['bold']))
 			print("\t   Here's your code:", colored(result, 'yellow', attrs=['bold']))
 			print("\t   ++++++++++++++++\n")
 			
@@ -119,8 +120,8 @@ class Generator:
 			# USERCODE.TXT
 
 			
-			isfileExist = file_create_add.Attributes(uD1, self.inp, 1, 2, 3, "Time: ", inp3=inp3, 
-											length=inp4, code='Code: ', result=result)
+			isfileExist = file_create_add.Attributes(uD1, "Time: ", 1, 2, 3, self.inp + ' Code: {}'.format(result) + ' id: {}'.format(idx),
+													inp3=inp3, length=inp4)
 			isfileExist.createFile()
 
 			sys.exit()

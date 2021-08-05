@@ -11,9 +11,9 @@ class Input:
 class Attributes(Input):
 
 	def __init__(
-		self, ud, inp, slp0, 
-		slp1, slp2,stats, inp3='',
-		length='', code='', result=''):
+		self, ud, stats, slp0, 
+		slp1, slp2, inp, 
+		code='', inp3='', length=''):
 
 		super().__init__(inp, inp3, length)
 
@@ -24,7 +24,6 @@ class Attributes(Input):
 		self.stats = stats
 		self.code = code
 		self.length = length
-		self.result = result
 
 	def createFile(self):
 
@@ -49,7 +48,7 @@ class Attributes(Input):
 				for line in lines:
 					count += 1
 
-				print(f'[line {count}] <{"user: "+ self.inp}> <{"org: " + self.inp3}> <{"len: "+ self.length}> <{self.code + self.result}> <{self.stats + time.ctime(sec)}>', file=open(self.ud, 'a'))
+				print(f'[line {count}] <{self.stats + time.ctime(sec)}> <{"org: " + self.inp3}> <{"len: "+ self.length}> <{"user: "+ self.inp}> ', file=open(self.ud, 'a'))
 							
 				fp.close()
 
@@ -70,7 +69,7 @@ class Attributes(Input):
 				for line in lines:
 					count += 1
 
-				print(f'[line {count}] <{"user: "+ self.inp}> <{"org: " + self.inp3}> <{"len: "+ self.length}> <{self.code + self.result}> <{self.stats + time.ctime(sec)}>', file=open(self.ud, 'a'))
+				print(f'[line {count}] <{self.stats + time.ctime(sec)}> <{"org: " + self.inp3}> <{"len: "+ self.length}> <{"user: "+ self.inp}> ', file=open(self.ud, 'a'))
 									
 				fp.close()
 

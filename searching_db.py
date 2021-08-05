@@ -15,17 +15,31 @@ class File:
 
 		pattern = re.compile(self.opt1)
 
+
 		for i, line in enumerate(open(self.file)):
 			
 			for match in re.finditer(pattern, line):
 
-				total += 1
-				
-				print(colored("\t[*] Found!\n", 'green', attrs=['bold']))
-				
-				print("   " + match.string)
 
+				total += 1
+
+				print(colored("\t[*] Found!\n", 'green', attrs=['bold']))
+								
+				if total > 1 :
+
+					total -= 1
+			
+					print("   {}".format(match.string))
+				
+				elif total <= 1:
+
+					print("   {}".format(match.string))
+
+				
+				else: pass
+				
 				time.sleep(1)
+
 
 		print(colored("\t[+] Total: " + str(total), 'yellow', attrs=['bold']))
 				

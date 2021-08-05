@@ -19,6 +19,20 @@ class Verify:
 		
 			sys.exit()
 
+
+		# ID INPUT
+		
+
+		idx = input("\t[!] Please type your id : ")
+
+		if idx == "":
+
+			time.sleep(1)
+			
+			print(colored("\n\t[x] This line cannot be empty!", 'red', attrs=['bold']))
+		
+			sys.exit()
+
 		else:
 
 			with open(uD1, 'r') as f:
@@ -27,19 +41,19 @@ class Verify:
 
 				# for line in fp:
 			
-				if re.search(r'\bCode: {}\b'.format(inner_inp), fp):
+				if re.search(r'\buser: {} Code: {} id: {}\b'.format(self.outter_inp, inner_inp, idx), fp):
 
 					print(colored("\n\t[*] Logging in ...", 'green', attrs=['bold']))
 
 					time.sleep(1) 
 
-					option_opr.Exists().dataExists()
+					option_opr.Exists(self.outter_inp).dataExists()
 
 				else:
 
 					time.sleep(2)
 
-					print(colored("\n\t[x] Cannot find -> " + colored("user: " + self.outter_inp, 'yellow') + " | " + colored("code: " + inner_inp, 'yellow'), 'red', attrs=['bold']))
+					print(colored("\n\t[x] Cannot find -> " + colored("user: " + self.outter_inp, 'yellow') + " | " + colored("code: " + inner_inp, 'yellow') + " | " + colored("id: " + idx, 'magenta'), 'red', attrs=['bold']))
 
 					time.sleep(1)	
 					

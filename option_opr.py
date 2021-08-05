@@ -1,6 +1,7 @@
 import input_find
 import input_remove
 import codegen
+import file_create_add
 import changecode
 from srcode import *
 
@@ -34,7 +35,7 @@ class Exists:
 				print(colored("\t[x] Try again, there's no {" + inpA + "} option", 'red', attrs=['bold']))
 				print("\t++++++++++++++++++++++++++++++++++++")
 
-				file_create_add.Attributes(uD3, self.inp, 1, 2, 3, "Attempting at: ").createFile()		
+				file_create_add.Attributes(uD3, "Attempting at: ", 1, 2, 3, self.arg).createFile()		
 				
 				time.sleep(1)
 				sys.exit()
@@ -64,7 +65,7 @@ class Exists:
 				print(colored("\t[x] Try again, there's no {" + inpSp + "} option", 'red', attrs=['bold']))
 				print("\t++++++++++++++++++++++++++++++++++++")
 				
-				file_create_add.Attributes(uD3, self.inp, 1, 2, 3, "Attempting at: ").createFile()		
+				file_create_add.Attributes(uD3, "Attempting at: ", 1, 2, 3, self.arg).createFile()		
 				
 				time.sleep(1)
 				sys.exit()
