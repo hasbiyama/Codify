@@ -2,7 +2,7 @@
 
 # Codify
 
-A simple way to manage and interact with (semi-random) code generator database.
+A simple way to manage and interact with (pseudo-random) code generator database.
 
 ## Installation
 
